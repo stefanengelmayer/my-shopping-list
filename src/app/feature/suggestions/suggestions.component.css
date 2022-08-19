@@ -1,0 +1,22 @@
+.suggestion-item{
+  margin-top: 3px;
+  border: 1px solid black;
+}
+
+.description{
+  min-height: 40px;
+  margin-left: 5px;
+  margin-top: 15px;
+  height: 100%;
+}
+button{
+  margin-top: -3px;
+}
+
+fa-icon{
+  margin-right: 5px;
+}
+.delete{
+  margin-right: 5px;
+  float: right;
+}

@@ -1,0 +1,45 @@
+form input {
+  margin-left: 10px;
+}
+
+form button {
+  margin-left: 10px;
+}
+
+.bought{
+  margin-left: 10px;
+}
+
+.item {
+  cursor: pointer;
+  alignment: center;
+  border: 1px solid grey;
+}
+
+.item fa-icon {
+  margin-left: 5px;
+}
+
+.item .item-text {
+  margin-left: 10px;
+}
+
+.field {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.deleted {
+  cursor: not-allowed;
+  text-decoration: line-through;
+  background-color: #e7e2e2;
+}
+
+.add_items {
+  margin-top: 10px;
+}
+
+.footer {
+  margin-top: 10px;
+}

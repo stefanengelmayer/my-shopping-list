@@ -1,0 +1,11 @@
+<span *ngIf="items.length == 0">Produkte müssen erst noch per Einkaufsliste hinzugefügt werden.</span>
+<div class="suggestions" *ngIf="items.length > 0">
+  <div class="suggestion-item" *ngFor="let item of items">
+    <div class="description"><b>{{item.name}}</b> ({{item.count}} x <span i18n>benutzt</span>)
+      <button class="delete btn btn-danger btn-sm" (click)="deleteSuggestion(item)">
+        <fa-icon [icon]="faTrash"></fa-icon>
+        <span>Löschen</span>
+      </button>
+    </div>
+  </div>
+</div>

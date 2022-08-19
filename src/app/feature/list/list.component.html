@@ -1,0 +1,37 @@
+<form class="row g-2 add_items">
+  <div class="col-8 col-md-10 col-lg-3 offset-lg-4 ">
+    <input id="itemadd" class="form-control" placeholder="Produktname eingeben" type="text" list="itemList" #newItem autocomplete="off"/>
+    <datalist id="itemList">
+      <option *ngFor="let item of items" [value]="item.name"></option>
+    </datalist>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-primary" (click)="addItem()" i18n>Hinzufügen</button>
+  </div>
+</form>
+
+<div class="row field">
+  <div class="item col-lg-8 col-md-10 offset-md-1 offset-lg-2" *ngFor="let item of shoppingItems" (click)="toggleDeleted(item)" [ngClass]="getClassDeleted(item)">
+    <fa-icon [icon]="getIcon(item)"></fa-icon>
+    <span class="item-text">{{item.item_name}}</span>
+  </div>
+  <span *ngIf="(shoppingItems.length === 0)" i18n>
+    Du musst nichts einkaufen.
+  </span>
+</div>
+
+
+<div class="row g-2 footer">
+  <div class="col-auto offset-lg-2 offset-md-1">
+    <button class="btn btn-success bought" (click)="removeDeleted()">
+      <fa-icon [icon]="faCheck"></fa-icon>
+      <span i18n>Alles eingekauft</span>
+    </button>
+  </div>
+  <div class="col-auto offset-1 offset-md-5 offset-lg-4">
+    <button class="btn btn-primary" (click)="reloadShoppingList()">
+      <fa-icon [icon]="faArrowsRotate" ></fa-icon>
+      <span i18n>Aktualisieren</span>
+    </button>
+  </div>
+</div>
