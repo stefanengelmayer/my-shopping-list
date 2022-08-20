@@ -4,12 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-shopping-list": {
-      "i18n": {
-        "sourceLocale": "de-DE",
-        "locales": {
-          "en-US": "src/locale/locale.us.xlf"
-        }
-      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -19,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["de-DE"],
             "outputPath": "dist/my-shopping-list",
             "index": "src/index.html",
             "main": "src/main.ts",

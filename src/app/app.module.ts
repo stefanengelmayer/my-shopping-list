@@ -29,7 +29,7 @@ import {SuggestionsComponent} from './feature/suggestions/suggestions.component'
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [PdfViewerComponent],
+  providers: [PdfViewerComponent, ListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
