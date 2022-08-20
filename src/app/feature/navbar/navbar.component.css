@@ -2,4 +2,13 @@
   display: inline;
   margin-left: 5px;
 }
+.nav-item{
+  justify-content: center;
+  border-left: 1px solid gray;
+  padding-left: 5px;
+}
 
+.active{
+  color: black;
+  font-size: 120%;
+}
