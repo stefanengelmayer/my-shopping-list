@@ -19,6 +19,7 @@ The file `databse.sqlite3` is in the server directory.
 ## Structure of the database.sqlite3 file
 
 The 'items' table structure:  
+
 | row   | type    |
 |-------|---------|
 | id    | INTEGER |
@@ -26,6 +27,7 @@ The 'items' table structure:
 | count | INTEGER |  
 
 The 'shoppinglist' table structure:  
+
 | row     | type    |
 |---------|---------|
 | id      | INTEGER |
