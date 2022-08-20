@@ -15,13 +15,13 @@
         <li class="nav-item">
           <fa-icon [icon]="faEraser"></fa-icon> <a class="nav-link"  (click)="collapseNav()" routerLink="suggestions" routerLinkActive="active">Vorschläge löschen</a>
         </li>
-        <hr />
-        <li class="nav-item">
-          <fa-icon [icon]="faFilePdf"></fa-icon> <a class="nav-link" *ngIf="isPdf" (click)="collapseNav()" routerLink="kochbuch" routerLinkActive="active">Online Kochbuch</a>
+        <hr *ngIf="isPdf"/>
+        <li class="nav-item" *ngIf="isPdf">
+          <fa-icon [icon]="faFilePdf"></fa-icon> <a class="nav-link" (click)="collapseNav()" routerLink="kochbuch" routerLinkActive="active">Online Kochbuch</a>
         </li>
-        <hr />
-        <li class="nav-item">
-          <fa-icon [icon]="faFileArrowDown"></fa-icon> <a class="nav-link" *ngIf="isPdf" (click)="collapseNav()" href="assets/cookbook.pdf" routerLinkActive="active">Download Kochbuch</a>
+        <hr *ngIf="isPdf"/>
+        <li class="nav-item" *ngIf="isPdf">
+          <fa-icon [icon]="faFileArrowDown"></fa-icon> <a class="nav-link" (click)="collapseNav()" href="assets/cookbook.pdf" routerLinkActive="active">Download Kochbuch</a>
         </li>
       </ul>
     </div>
