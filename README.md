@@ -8,7 +8,31 @@ Also translations may be included in the future.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.  
+
+For the backend, the php-crud-api is used.  
+Go into the server folder and run `php -S localhost:8080`.
+Now the client can send and receive data from the backend.
+To store the data, a SQLite database is used.
+The file `databse.sqlite3` is in the server directory.
+
+## Structure of the database.sqlite3 file
+
+The 'items' table structure:  
+| row   | type    |
+|-------|---------|
+| id    | INTEGER |
+| name  | TEXT    |
+| count | INTEGER |  
+
+The 'shoppinglist' table structure:  
+| row     | type    |
+|---------|---------|
+| id      | INTEGER |
+| item_id | INTEGER |
+| deleted | INTEGER |  
+
+
 
 ## Code scaffolding
 
