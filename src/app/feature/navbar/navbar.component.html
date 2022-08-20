@@ -9,19 +9,19 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <hr />
         <li class="nav-item">
-          <fa-icon [icon]="faBasketShopping"></fa-icon> <a class="nav-link" (click)="collapseNav()" routerLink="list" routerLinkActive="active" i18n>Einkaufsliste</a>
+          <fa-icon [icon]="faBasketShopping"></fa-icon> <a class="nav-link" (click)="collapseNav()" routerLink="list" routerLinkActive="active">Einkaufsliste</a>
         </li>
         <hr />
         <li class="nav-item">
-          <fa-icon [icon]="faEraser"></fa-icon> <a class="nav-link"  (click)="collapseNav()" routerLink="suggestions" routerLinkActive="active" i18n>Vorschläge löschen</a>
+          <fa-icon [icon]="faEraser"></fa-icon> <a class="nav-link"  (click)="collapseNav()" routerLink="suggestions" routerLinkActive="active">Vorschläge löschen</a>
         </li>
         <hr />
         <li class="nav-item">
-          <fa-icon [icon]="faFilePdf"></fa-icon> <a class="nav-link" *ngIf="isPdf" (click)="collapseNav()" routerLink="kochbuch" routerLinkActive="active" i18n>Online Kochbuch</a>
+          <fa-icon [icon]="faFilePdf"></fa-icon> <a class="nav-link" *ngIf="isPdf" (click)="collapseNav()" routerLink="kochbuch" routerLinkActive="active">Online Kochbuch</a>
         </li>
         <hr />
         <li class="nav-item">
-          <fa-icon [icon]="faFileArrowDown"></fa-icon> <a class="nav-link" *ngIf="isPdf" (click)="collapseNav()" href="assets/cookbook.pdf" routerLinkActive="active" i18n>Download Kochbuch</a>
+          <fa-icon [icon]="faFileArrowDown"></fa-icon> <a class="nav-link" *ngIf="isPdf" (click)="collapseNav()" href="assets/cookbook.pdf" routerLinkActive="active">Download Kochbuch</a>
         </li>
       </ul>
     </div>

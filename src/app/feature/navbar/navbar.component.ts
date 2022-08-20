@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {PdfViewerComponent} from '../pdf-viewer/pdf-viewer.component';
-import {faBasketShopping, faEraser, faFilePdf, faFileArrowDown} from '@fortawesome/free-solid-svg-icons';
+import {faBasketShopping, faEraser, faFileArrowDown, faFilePdf} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -33,6 +33,5 @@ export class NavbarComponent implements OnInit {
 
   collapseNav() {
     this.navbarToggler?.nativeElement.click();
-    console.log('Clicked');
   }
 }
