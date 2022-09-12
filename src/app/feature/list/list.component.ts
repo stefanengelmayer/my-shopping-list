@@ -40,13 +40,13 @@ export class ListComponent implements OnInit {
    * This method gets invoked by a button click.
    */
   addItem() {
-    const itemName = this.newItem.nativeElement.value
+    const itemName = this.newItem.nativeElement.value.trimEnd();
     if (itemName == '') return false;
     if (this.items.filter(item => item.name == itemName).length == 0) {
-      this.postService.addItem(itemName).subscribe(response => {
+      this.postService.addItem(itemName).subscribe(() => {
         this.getItemSuggestions().subscribe(response => {
           this.updateItemSuggestions(response);
-          this.addToShoppingList(itemName)?.subscribe(response => {
+          this.addToShoppingList(itemName)?.subscribe(() => {
             this.updateShoppingList();
           });
           this.newItem.nativeElement.value = '';
@@ -54,7 +54,7 @@ export class ListComponent implements OnInit {
       })
       return false;
     } else {
-      this.addToShoppingList(itemName)?.subscribe(response => {
+      this.addToShoppingList(itemName)?.subscribe(() => {
         this.updateShoppingList();
       });
       this.newItem.nativeElement.value = '';
@@ -92,6 +92,7 @@ export class ListComponent implements OnInit {
 
   /**
    * Updates the shoppingItems from the backend and sorts them by their item_name.
+   * @private
    */
   private updateShoppingList() {
     this.shoppingItems = [];
@@ -160,7 +161,7 @@ export class ListComponent implements OnInit {
         ids.push(item.id)
       }
     }
-    this.deleteService.deleteShoppingListEntries(ids).subscribe(response => {
+    this.deleteService.deleteShoppingListEntries(ids).subscribe(() => {
       this.updateShoppingList();
     })
   }

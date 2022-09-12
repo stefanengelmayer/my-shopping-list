@@ -1,5 +1,5 @@
 <form class="row g-2 add_items">
-  <div class="col-8 col-md-10 col-lg-3 offset-lg-4 ">
+  <div class="col-7 col-md-10 col-lg-4 offset-lg-3 ">
     <input id="itemadd" class="form-control" placeholder="Produktname eingeben" type="text" list="itemList" #newItem
            autocomplete="off"/>
     <datalist id="itemList">
@@ -30,7 +30,7 @@
       <span>Alles eingekauft</span>
     </button>
   </div>
-  <div class="col-auto offset-2 offset-md-5 offset-lg-4">
+  <div class="col-auto offset-1 offset-md-5 offset-lg-4">
     <button class="btn btn-sm btn-primary" (click)="reloadShoppingList()">
       <fa-icon [icon]="faArrowsRotate"></fa-icon>
       <span>Aktualisieren</span>
